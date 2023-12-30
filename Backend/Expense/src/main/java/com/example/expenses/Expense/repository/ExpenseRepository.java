@@ -1,0 +1,25 @@
+package com.example.expenses.Expense.repository;
+
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.example.expenses.Expense.model.Expense;
+
+@Repository
+public interface ExpenseRepository extends JpaRepository<Expense, Long> {
+
+	@Override
+    List<Expense> findAll(Sort sort);
+	
+    @Override
+    Optional<Expense> findById(Long id);
+    @Override
+    <S extends Expense> S save(S entity);
+    @Override
+    void deleteById(Long id);
+}
+
