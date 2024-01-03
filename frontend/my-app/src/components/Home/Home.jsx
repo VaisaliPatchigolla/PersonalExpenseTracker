@@ -20,11 +20,7 @@ const Home = () => {
     <div>
       <nav className="navbarhome">
         <div>
-          <a href="/
-          
-          
-          
-          " className="navbar-brand">
+          <a href="/" className="navbar-brand">
             Personal-Expenses-System
           </a>
         </div>
